@@ -1,0 +1,40 @@
+baseURL = 'https://dreamagentx.com/'
+languageCode = 'zh-cn'
+defaultContentLanguage = 'zh-cn'
+title = 'DreamAgentX'
+
+disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
+
+[params]
+  description = '让复杂的事情变简单'
+  author = 'DreamAgentX'
+
+[[menus.main]]
+  name = '首页'
+  url = '/'
+  weight = 1
+
+[[menus.main]]
+  name = '关于我们'
+  url = '/about/'
+  weight = 2
+
+[[menus.main]]
+  name = '我们的服务'
+  url = '/services/'
+  weight = 3
+
+[[menus.main]]
+  name = '内容计划'
+  url = '/plan/'
+  weight = 4
+
+[[menus.main]]
+  name = '联系我们'
+  url = '/contact/'
+  weight = 5
+
+[[menus.main]]
+  name = '声明'
+  url = '/statement/'
+  weight = 6

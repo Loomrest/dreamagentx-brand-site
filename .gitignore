@@ -1,0 +1,9 @@
+# Hugo
+/public/
+/resources/
+.hugo_build.lock
+
+# OS & local docs (planning files stay local)
+.DS_Store
+*.docx
+本地-*.md
