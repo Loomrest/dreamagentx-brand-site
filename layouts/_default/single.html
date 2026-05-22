@@ -1,10 +1,10 @@
 {{ define "main" }}
 <article class="page">
-  <header class="page-header">
+  <header class="page-head">
     <h1>{{ .Title }}</h1>
-    {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
+    {{ with .Params.description }}<p class="page-lead">{{ . }}</p>{{ end }}
   </header>
-  <div class="content">
+  <div class="content prose">
     {{ .Content }}
   </div>
 </article>
