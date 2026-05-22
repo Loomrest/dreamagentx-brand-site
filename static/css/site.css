@@ -10,6 +10,7 @@
   --max: 42rem;
   --radius: 8px;
   --shadow: 0 1px 3px rgb(0 0 0 / 6%);
+  --header-h: 3.25rem;
 }
 
 * {
@@ -35,20 +36,8 @@ body {
   padding: 0 1.25rem;
 }
 
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  z-index: 100;
-  padding: 0.5rem 1rem;
-  background: var(--accent);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 0 0 var(--radius) var(--radius);
-}
-
-.skip-link:focus {
-  left: 1rem;
+#main {
+  scroll-margin-top: calc(var(--header-h) + 1rem);
 }
 
 .site-header {
@@ -66,8 +55,9 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem 1rem;
-  padding-top: 0.875rem;
-  padding-bottom: 0.875rem;
+  min-height: var(--header-h);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .site-title {
@@ -82,19 +72,19 @@ body {
   color: var(--accent);
 }
 
-.nav-toggle {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+.site-title:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
 }
 
-.nav-toggle-btn {
+/* 手机：点「菜单」展开/收起 */
+.site-nav-details {
+  margin: 0;
+}
+
+.nav-summary {
   display: none;
+  list-style: none;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 0.75rem;
@@ -107,7 +97,12 @@ body {
   user-select: none;
 }
 
-.nav-toggle-icon {
+.nav-summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-summary::before {
+  content: "";
   display: block;
   width: 1.125rem;
   height: 2px;
@@ -143,9 +138,7 @@ body {
   font-weight: 500;
 }
 
-.site-nav a:focus-visible,
-.site-title:focus-visible,
-.skip-link:focus-visible {
+.site-nav a:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
 }
@@ -257,34 +250,46 @@ main {
   text-align: center;
 }
 
-.footer-brand,
-.footer-company {
+.footer-brand {
   margin: 0;
   font-size: 0.875rem;
   color: var(--muted);
   line-height: 1.6;
 }
 
-.footer-company {
-  margin-top: 0.35rem;
-  font-size: 0.8125rem;
+/* 电脑：导航横排，不显示「菜单」按钮 */
+@media (min-width: 720px) {
+  .nav-summary {
+    display: none !important;
+  }
+
+  .site-nav-details .site-nav {
+    display: block;
+  }
+
+  .site-nav-details:not([open]) .site-nav {
+    display: block;
+  }
 }
 
+/* 手机：只显示「菜单」，点开才出链接列表 */
 @media (max-width: 719px) {
-  .nav-toggle-btn {
+  .nav-summary {
     display: inline-flex;
   }
 
-  .site-nav {
-    display: none;
+  .site-nav-details {
     width: 100%;
-    order: 3;
+  }
+
+  .site-nav-details[open] .site-nav {
+    margin-top: 0.5rem;
     padding-top: 0.5rem;
     border-top: 1px solid var(--border);
   }
 
-  .nav-toggle:checked ~ .site-nav {
-    display: block;
+  .site-nav-details:not([open]) .site-nav {
+    display: none;
   }
 
   .site-nav .nav {

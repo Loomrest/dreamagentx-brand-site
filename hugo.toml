@@ -12,7 +12,6 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
 [params]
   description = '让复杂的事情变简单'
   author = 'DreamAgentX'
-  companyName = '北京圣巨迎财餐饮管理有限公司'
 
 [[menus.main]]
   name = '首页'
