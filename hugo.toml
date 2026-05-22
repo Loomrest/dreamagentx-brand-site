@@ -3,6 +3,7 @@ languageCode = 'zh-cn'
 defaultContentLanguage = 'zh-cn'
 title = 'DreamAgentX'
 
+disableHugoGeneratorInject = true
 disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
 
 [params]
