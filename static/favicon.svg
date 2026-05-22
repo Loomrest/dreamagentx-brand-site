@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="7" fill="#1a365d"/>
-  <text x="5.5" y="23" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#ffffff">D</text>
-  <text x="11.5" y="19" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="700" fill="#ffffff">D</text>
+  <!-- 原大 D -->
+  <text x="6" y="23" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#ffffff">D</text>
+  <!-- 内嵌小 D -->
+  <text x="14.5" y="19.5" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="700" fill="#ffffff">D</text>
 </svg>
