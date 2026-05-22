@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="7" fill="#1a365d"/>
-  <path fill="#ffffff" d="M8 7h5v18H8V7zm5 0h6.2c4.2 0 7.8 3.4 7.8 9s-3.6 9-7.8 9H13V7z"/>
+  <text x="5.5" y="23" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#ffffff">D</text>
+  <text x="11.5" y="19" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="700" fill="#ffffff">D</text>
 </svg>
