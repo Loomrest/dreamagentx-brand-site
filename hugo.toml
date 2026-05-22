@@ -6,9 +6,13 @@ title = 'DreamAgentX'
 disableHugoGeneratorInject = true
 disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params]
   description = '让复杂的事情变简单'
   author = 'DreamAgentX'
+  companyName = '北京圣巨迎财餐饮管理有限公司'
 
 [[menus.main]]
   name = '首页'
