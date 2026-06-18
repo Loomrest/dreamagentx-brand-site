@@ -292,6 +292,12 @@ main {
   color: var(--ink-soft);
 }
 
+.site-footer .footer-brand {
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
 @media (max-width: 520px) {
   .header-inner {
     align-items: flex-start;

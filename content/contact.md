@@ -3,6 +3,8 @@ title: 联系我们
 description: 联系方式
 ---
 
+**北京梦捷特克人工智能科技有限公司**
+
 如有任何疑问或合作意向，欢迎联系：
 
 <ul class="email-list">
