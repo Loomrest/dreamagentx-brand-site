@@ -298,6 +298,13 @@ main {
   opacity: 0.85;
 }
 
+.site-footer .footer-tm {
+  margin-top: 0.5rem;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
 @media (max-width: 520px) {
   .header-inner {
     align-items: flex-start;
