@@ -15,7 +15,6 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
   companyName = '北京梦捷特克人工智能科技有限公司'
   companyNameEn = 'DreamAgentX AI Technology Co., Ltd.'
   brandMark = 'DreamAgentX™'
-  brandMarkAlt = 'DreamAgent™'
 
 [[menus.main]]
   name = '首页'

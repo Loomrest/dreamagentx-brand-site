@@ -2,11 +2,3 @@
 title: 关于我们
 description: 关于 DreamAgentX
 ---
-
-**北京梦捷特克人工智能科技有限公司**（DreamAgentX AI Technology Co., Ltd.）是 DreamAgentX 品牌的运营主体。
-
-DreamAgentX 是一个正在成长中的项目。我们的目标很简单：做出真正有用的服务。
-
-目前，项目处于早期阶段，我们正在一步步地搭建基础、完善想法。每一个功能，都会在准备好之后推出。
-
-我们相信，好的东西值得花时间打磨。
