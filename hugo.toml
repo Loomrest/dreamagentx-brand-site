@@ -40,3 +40,8 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
   name = '联系我们'
   url = '/contact/'
   weight = 5
+
+[[menus.main]]
+  name = '声明'
+  url = '/statement/'
+  weight = 6
