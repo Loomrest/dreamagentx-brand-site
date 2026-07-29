@@ -3,15 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{/* 分区 robots：笔记区开放收录，品牌区保持不收录（SM-BRAND-SITE-1 §0.3） */}}
+  {{ if hasPrefix .RelPermalink "/notes/" }}
+  <meta name="robots" content="index, follow">
+  {{ else }}
   <meta name="robots" content="noindex, nofollow">
+  {{ end }}
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
   {{ with .Params.description }}<meta name="description" content="{{ . }}">{{ end }}
   <link rel="icon" href="{{ "favicon.ico" | relURL }}?v=9" sizes="32x32">
   <link rel="icon" href="{{ "favicon.svg" | relURL }}?v=9" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}?v=9">
-  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}?v=16">
+  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}?v=17">
 </head>
-<body>
+<body{{ if hasPrefix .RelPermalink "/notes/" }} class="notes-zone"{{ end }}>
   <div class="site-bg" aria-hidden="true"></div>
   <header class="site-header">
     <div class="wrap header-inner">
@@ -32,7 +37,21 @@
   </main>
   <footer class="site-footer">
     <div class="wrap">
+      {{ with .Site.Menus.footer }}
+      <p class="footer-links">
+        {{ range . }}<a href="{{ .URL | relURL }}">{{ .Name }}</a>{{ end }}
+      </p>
+      {{ end }}
       <p>© {{ now.Year }} {{ .Site.Params.companyName }}</p>
+      {{/* 北京管局要求：备案号须挂在页面底部并链接工信部平台。备案通过后填 icpNumber 即自动显示。 */}}
+      {{ with .Site.Params.icpNumber }}
+      <p class="footer-icp">
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">{{ . }}</a>
+        {{ with $.Site.Params.policeNumber }}
+        <a href="https://beian.mps.gov.cn/" target="_blank" rel="noopener noreferrer">{{ . }}</a>
+        {{ end }}
+      </p>
+      {{ end }}
       <p class="footer-brand">{{ .Site.Params.brandMark }} · {{ .Site.Params.companyNameEn }}</p>
     </div>
   </footer>

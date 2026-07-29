@@ -1,39 +1,44 @@
 baseURL = 'https://dreamagentx.com/'
-languageCode = 'zh-cn'
+locale = 'zh-cn'
 defaultContentLanguage = 'zh-cn'
-title = 'DreamAgentX'
+title = 'DreamAgentX™'
 
 disableHugoGeneratorInject = true
-disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term', 'RSS']
 
 [markup.goldmark.renderer]
   unsafe = true
 
 [params]
   description = '让复杂的事情变简单'
-  author = 'DreamAgentX'
+  author = 'DreamAgentX™'
   companyName = '北京梦捷特克人工智能科技有限公司'
   companyNameEn = 'DreamAgentX AI Technology Co., Ltd.'
   brandMark = 'DreamAgentX™'
+  # 备案通过后填写，填了页脚自动显示并链接工信部/公安备案平台
+  icpNumber = ''
+  policeNumber = ''
 
+# ---------- 主导航：5 项。产品区在首个产品定型前不进导航，避免点进去是空页 ----------
 [[menus.main]]
   name = '首页'
   url = '/'
   weight = 1
 
 [[menus.main]]
+  name = '技术笔记'
+  url = '/notes/'
+  weight = 2
+
+[[menus.main]]
   name = '关于我们'
   url = '/about/'
-  weight = 2
+  weight = 3
 
 [[menus.main]]
   name = '我们的服务'
   url = '/services/'
-  weight = 3
-
-[[menus.main]]
-  name = '内容计划'
-  url = '/plan/'
   weight = 4
 
 [[menus.main]]
@@ -41,7 +46,18 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
   url = '/contact/'
   weight = 5
 
-[[menus.main]]
+# ---------- 页脚：法律类页面按惯例放页脚，不占主导航 ----------
+[[menus.footer]]
   name = '声明'
-  url = '/statement/'
-  weight = 6
+  url = '/legal/statement/'
+  weight = 1
+
+[[menus.footer]]
+  name = '隐私政策'
+  url = '/legal/privacy/'
+  weight = 2
+
+[[menus.footer]]
+  name = '用户协议'
+  url = '/legal/terms/'
+  weight = 3
